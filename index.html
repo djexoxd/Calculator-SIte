@@ -24,16 +24,13 @@
       }
 
       .calculator {
-        background-color: rgba(
-          29,
-          31,
-          33,
-          0.8
-        ); /* Semi-transparent black background */
+        background-color: rgba(29, 31, 33, 0.8);
         border-radius: 20px;
         overflow: hidden;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         padding: 30px;
+        width: 100%;
+        max-width: 400px;
       }
 
       .screen input {
@@ -108,6 +105,33 @@
 
       .btn-equal:active {
         background-color: #4bc0a5;
+      }
+
+      /* Responsive Design for Mobile */
+      @media (max-width: 600px) {
+        .calculator {
+          padding: 20px;
+          max-width: 95%;
+        }
+
+        .screen input {
+          font-size: 30px;
+          padding: 10px;
+        }
+
+        .btn {
+          font-size: 20px;
+          padding: 20px;
+        }
+
+        .zero {
+          grid-column: span 2;
+        }
+
+        .buttons {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 10px;
+        }
       }
     </style>
   </head>
